@@ -18,13 +18,26 @@ public static string Gamemanager(string scene)
     {
         Raylib.ClearBackground(Color.Green);
 
+        //UI
+
+        UI ui = new();
+
+        ui.Draw();
+
         //player stuff
 
-        Player.Draw();
 
         //enemy stuff
         Enemy enemy = new();
         enemy.Draw();
+
+        //Damage
+        Damage damage = new();
+        damage.Hit();
+        damage.autoDMG();
+
+        
+        
 
     }
 
