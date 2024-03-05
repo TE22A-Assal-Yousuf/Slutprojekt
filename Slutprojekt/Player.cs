@@ -1,8 +1,11 @@
 class Player
 {
-    public int playerDamege = 1;
-    public int autoDamage = 0; 
+    public static double playerDamege = 1;
+    public static double autoDamage = 0; 
 
+    
+
+    
     
 
 

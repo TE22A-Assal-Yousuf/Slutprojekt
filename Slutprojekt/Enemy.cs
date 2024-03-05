@@ -1,17 +1,24 @@
+using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
+
 class Enemy
 {
-    public static Rectangle enemyRect = new Rectangle(250, 250, 64, 64);
+    public int enmysize = 128;
+    public Rectangle enemyRect = new Rectangle(250, 250, 256, 256);
+    
+    public static double points = 0;
+    public double enemyHP = 10;
+    public double enemyHPMax = 10;
 
-    public static int enemyHP = 100;
-
-
-    public static void Draw()
+    public void Draw()
     {
-        
-         Raylib.DrawRectangleRec(enemyRect, Color.DarkBlue);
-         Raylib.DrawText($"Health{enemyHP}", 250, 230, 20, Color.Black);
+
+        Raylib.DrawRectangleRec(enemyRect, Color.DarkBlue);
+        Raylib.DrawText($"Points{points}", 250, 230, 20, Color.Black);
+
 
     }
+    
+   
 
 }
- 

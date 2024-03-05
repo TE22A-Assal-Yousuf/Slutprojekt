@@ -9,44 +9,15 @@ int fps = 60;
 Raylib.InitWindow(windowWidth, windowHeight, "Clickyballs");
 Raylib.SetTargetFPS(fps);
 
-String scene = "start";
-Enemy enemy = new();
+String scene = "game";
+
 
 while (!Raylib.WindowShouldClose())
 {
     Raylib.BeginDrawing();
 
-    scene = Gamemanager(scene);
+    scene = GameManager.Gamemanager(scene);
 
     Raylib.EndDrawing();
-
-
 }
 
-static string Gamemanager(string scene)
-{
-    if (scene == "start")
-    {
-
-        Raylib.ClearBackground(Color.Purple);
-
-        if (Raylib.IsKeyPressed(KeyboardKey.Space))
-        {
-            scene = "game";
-        }
-
-    }
-
-    else if (scene == "game")
-    {
-
-
-        Raylib.ClearBackground(Color.Green);
-
-
-        Enemy.Draw();
-
-    }
-
-    return scene;
-}
