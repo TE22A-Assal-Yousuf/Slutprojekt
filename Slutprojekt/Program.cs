@@ -6,6 +6,8 @@ int windowWidth = 1280;
 int windowHeight = 800;
 int fps = 60;
 
+GameManager gm = new();
+
 Raylib.InitWindow(windowWidth, windowHeight, "Clickyballs");
 Raylib.SetTargetFPS(fps);
 
@@ -16,7 +18,7 @@ while (!Raylib.WindowShouldClose())
 {
     Raylib.BeginDrawing();
 
-    scene = GameManager.Gamemanager(scene);
+    scene = gm.Gamemanager(scene);
 
     Raylib.EndDrawing();
 }

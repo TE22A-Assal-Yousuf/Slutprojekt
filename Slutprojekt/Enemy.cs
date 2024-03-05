@@ -10,12 +10,17 @@ class Enemy
     public double enemyHP = 10;
     public double enemyHPMax = 10;
 
+    private static Font MinecraftFont = Raylib.LoadFont("Minecraft.ttf");
+    private static Font MinecrafterFont = Raylib.LoadFont("Minecrafter.Reg.ttf");
+    private static Font font = Raylib.LoadFont("Minecraft.ttf");
+
+
     public void Draw()
     {
 
         Raylib.DrawRectangleRec(enemyRect, Color.DarkBlue);
-        Raylib.DrawText($"Points{points}", 250, 230, 20, Color.Black);
-
+        Raylib.DrawTextEx(MinecrafterFont , "Points:", new Vector2 (330,170) , 20 , 5, Color.Black);
+        Raylib.DrawTextEx(MinecraftFont , $"{points}", new Vector2 (280,200) , 50 , 5, Color.Black);
 
     }
     

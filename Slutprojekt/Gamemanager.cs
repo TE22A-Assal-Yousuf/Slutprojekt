@@ -1,6 +1,6 @@
 public class GameManager{
 Enemy enemy = new Enemy();
-public static string Gamemanager(string scene)
+public string Gamemanager(string scene)
 {
     if (scene == "start")
     {

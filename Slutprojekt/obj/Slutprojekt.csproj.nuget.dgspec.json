@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\yoyoa\\OneDrive\\Skrivbord\\my games\\Skol_slutprojekt\\Slutprojekt-1\\Slutprojekt\\Slutprojekt.csproj": {}
+    "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj": {}
   },
   "projects": {
-    "c:\\Users\\yoyoa\\OneDrive\\Skrivbord\\my games\\Skol_slutprojekt\\Slutprojekt-1\\Slutprojekt\\Slutprojekt.csproj": {
+    "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\yoyoa\\OneDrive\\Skrivbord\\my games\\Skol_slutprojekt\\Slutprojekt-1\\Slutprojekt\\Slutprojekt.csproj",
+        "projectUniqueName": "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj",
         "projectName": "Slutprojekt",
-        "projectPath": "c:\\Users\\yoyoa\\OneDrive\\Skrivbord\\my games\\Skol_slutprojekt\\Slutprojekt-1\\Slutprojekt\\Slutprojekt.csproj",
-        "packagesPath": "C:\\Users\\yoyoa\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\yoyoa\\OneDrive\\Skrivbord\\my games\\Skol_slutprojekt\\Slutprojekt-1\\Slutprojekt\\obj\\",
+        "projectPath": "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj",
+        "packagesPath": "C:\\Users\\yousuf.assal\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yoyoa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\yousuf.assal\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
