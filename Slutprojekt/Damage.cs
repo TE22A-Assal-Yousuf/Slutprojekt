@@ -2,9 +2,12 @@ using System.Numerics;
 using System.Security.Cryptography.X509Certificates;
 class Damage
 {
-    Player player = new();
     Enemy enemy = new();
+    Player damage = new();
+
     Vector2 mousePos = Raylib.GetMousePosition();
+    float autodamagedelay = 0;
+
     public void Hit()
     {
 
@@ -15,7 +18,7 @@ class Damage
             if (Raylib.IsMouseButtonPressed(MouseButton.Left))
             {
 
-                Enemy.points += Player.playerDamege;
+                Enemy.points += damage.playerDamege;
 
 
             }
@@ -24,9 +27,29 @@ class Damage
 
         }
     }
-
-    public void autoDMG()
+    public void update()
     {
-        Enemy.points += Player.autoDamage / 60;
+
+        autodamagedelay += Raylib.GetFrameTime();
+
+        if (autodamagedelay > 1)
+        {
+
+            autodamagedelay = 0;
+
+            if (Enemy.points >= 0)
+            {
+
+            Enemy.points += damage.autoDamage;
+
+            }
+
+
+
+        }
+
+
+
     }
+
 }
