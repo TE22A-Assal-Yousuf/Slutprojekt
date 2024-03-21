@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 class Damage
 {
     Enemy enemy = new();
-    Player damage = new();
+    Player player = new();
 
     Vector2 mousePos = Raylib.GetMousePosition();
     float autodamagedelay = 0;
@@ -18,7 +18,7 @@ class Damage
             if (Raylib.IsMouseButtonPressed(MouseButton.Left))
             {
 
-                Enemy.points += damage.playerDamege;
+                Enemy.points += player.playerDamege;
 
 
             }
@@ -40,7 +40,7 @@ class Damage
             if (Enemy.points >= 0)
             {
 
-            Enemy.points += damage.autoDamage;
+            Enemy.points += player.autoDamage;
 
             }
 

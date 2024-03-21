@@ -10,3 +10,7 @@ class UI
         }
 
 }
+class Store
+{
+        
+}

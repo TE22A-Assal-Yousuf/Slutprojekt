@@ -7,6 +7,9 @@ public int fps = 60;
 
 
 Enemy enemy = new Enemy();
+UI ui = new();
+
+
 
 public void Update(){
     Raylib.InitWindow(windowWidth, windowHeight, "Clickyballs");
@@ -31,16 +34,12 @@ public string Gamemanager(string scene)
         Raylib.ClearBackground(Color.Green);
 
         //UI
-
-        UI ui = new();
-
         ui.Draw();
 
         //player stuff
 
 
         //enemy stuff
-        Enemy enemy = new();
         enemy.Draw();
 
         //Damage
