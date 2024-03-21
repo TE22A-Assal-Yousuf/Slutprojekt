@@ -1,57 +1,23 @@
 using System.ComponentModel;
-using System.Numerics;
-using System.Reflection.PortableExecutable;
-using System.Security.Cryptography.X509Certificates;
+    using System.Numerics;
+    using System.Reflection.PortableExecutable;
+    using System.Security.Cryptography.X509Certificates;
 
 class Rewards
 {
-
-    private string name;
-    private short dps;
-    private short stars;
-    private Texture2D rewardtexture;
+    Characters characters = new();
 
 
+    public string name { get; }
+    public int damage { get; }
 
-
-     public Rewards (string name, short dps, short stars)
+    public Rewards(string name, int damage)
     {
+
         this.name = name;
-        this.dps = dps;
-        this.Stars = stars;
-        
-    }
+        this.damage = damage;
 
-    public string Name
-    {
-        get { return name;  }
-        set { name = value; }
     }
-
-    public short DPS
-    {
-        get { return dps; }
-        set { dps = value; }
-    }
-    public short Stars
-    {
-        get { return stars; }
-        set { stars = value; }
-    }
-    public Texture2D RewardTextures
-    {
-        get { return rewardtexture; }
-        set { rewardtexture = value; }
-    }
-   
-    
-
-    
-    
-    List<Rewards> rewardsList = new List<Rewards>();
-    
-
-    
 
     
 
@@ -61,3 +27,71 @@ class Rewards
 
 
 }
+public class Characters
+{
+
+    List<Characters> RewardsList = new List<Characters>();
+
+    public void Characteradd()
+    {
+
+
+
+    }  
+
+
+    public void Draw()
+    {
+        JuliusC juliusC = new();
+
+        juliusC.Draw();
+       
+
+    }
+
+
+
+
+}
+public class JuliusC
+{
+    string Name = "Julius";
+    int Damage = 10;
+    short Stars = 4;
+    public Texture2D JuliusTexture = Raylib.LoadTexture(@"Hyper.png");
+
+    public void Draw()
+    {
+
+
+        Raylib.DrawTexture(JuliusTexture, 40, 60, Color.White);
+
+
+
+    }
+
+}
+public class Meo
+{
+    string Name = "Meo";
+    int Damage = 10;
+    short Stars = 4;
+    public Texture2D MeoTexture = Raylib.LoadTexture(@"Meo.png");
+
+    public void Draw()
+    {
+
+
+        Raylib.DrawTexture(MeoTexture, 480, 63, Color.White);
+
+
+
+    }
+
+}
+
+
+
+
+
+

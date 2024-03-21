@@ -16,7 +16,7 @@ while (!Raylib.WindowShouldClose())
     damage.update();
 
 
-    scene = gm.Gamemanager(scene);
+    scene = gm.Gamemanager(scene); 
 
 
     Raylib.EndDrawing();
