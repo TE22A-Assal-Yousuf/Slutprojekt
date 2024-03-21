@@ -86,7 +86,6 @@ public class Store
             if (Raylib.IsMouseButtonPressed(MouseButton.Left))
                 {
 
-                    damage.points -= 20;
                     damage.gems -= 20;
                 }
 

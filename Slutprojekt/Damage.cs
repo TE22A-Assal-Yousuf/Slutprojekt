@@ -2,8 +2,8 @@ using System.Numerics;
 using System.Security.Cryptography.X509Certificates;
 public class Damage
 {
-    Enemy enemy = new();
-    Player player = new();
+    Enemy enemy = new Enemy();
+    Player player = new Player();
     public double points = 0;
     public double gems = 500;
 

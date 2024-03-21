@@ -11,7 +11,6 @@ public class GameManager
 
 
     Characters characters = new();
-    Damage damage = new();
     Enemy enemy = new();
 
 
@@ -54,6 +53,7 @@ public class GameManager
             enemy.Draw();
 
             //Damage
+            Damage damage = new();
             damage.Hit();
             damage.Draw();
 
