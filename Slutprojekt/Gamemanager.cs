@@ -12,8 +12,10 @@ public class GameManager
 
     Characters characters = new();
     Damage damage = new();
-
     Enemy enemy = new();
+
+
+
 
     public void Update()
     {
@@ -53,32 +55,33 @@ public class GameManager
 
             //Damage
             damage.Hit();
-            
+            damage.Draw();
+
 
             //Store
-            Store store = new();
+           /* Store store = new();
             store.Drawstorebutton();
             store.Button();
-            if(store.storebuttonispressed == true)
+            if (store.storebuttonispressed == true)
             {
 
                 scene = "shop";
 
-            }
-            
+            }*/
+
 
 
             //Other
 
 
-            
+
 
         }
         else if (scene == "shop")
         {
             Raylib.ClearBackground(Color.Blue);
 
-            
+
             Characters characters = new();
 
             JuliusC juliusC = new();
@@ -88,16 +91,16 @@ public class GameManager
             juliusC.Draw();
 
             //Store
-            Store store = new();
+            /*Store store = new();
             store.Drawbackbutton();
             store.DrawBuybutton();
             store.Button();
-            if(store.backbuttonispressed == true)
+            if (store.backbuttonispressed == true)
             {
 
                 scene = "game";
 
-            }
+            }*/
 
         }
 

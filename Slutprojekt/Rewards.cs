@@ -58,7 +58,7 @@ public class JuliusC
     string Name = "Julius";
     int Damage = 10;
     short Stars = 4;
-    public Texture2D JuliusTexture = Raylib.LoadTexture(@"Hyper.png");
+     Texture2D JuliusTexture = Raylib.LoadTexture(@"Hyper.png");
 
     public void Draw()
     {
@@ -76,7 +76,7 @@ public class Meo
     string Name = "Meo";
     int Damage = 10;
     short Stars = 4;
-    public Texture2D MeoTexture = Raylib.LoadTexture(@"Meo.png");
+    Texture2D MeoTexture = Raylib.LoadTexture(@"Meo.png");
 
     public void Draw()
     {

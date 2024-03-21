@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj": {}
+    "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj": {
+    "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj",
+        "projectUniqueName": "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj",
         "projectName": "Slutprojekt",
-        "projectPath": "C:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj",
+        "projectPath": "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\Slutprojekt.csproj",
         "packagesPath": "C:\\Users\\yousuf.assal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\obj\\",
+        "outputPath": "c:\\Users\\yousuf.assal\\Documents\\spelutväckling\\Slutprojekt\\Slutprojekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yousuf.assal\\AppData\\Roaming\\NuGet\\NuGet.Config"
