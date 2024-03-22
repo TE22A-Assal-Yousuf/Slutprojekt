@@ -11,7 +11,7 @@ public class GameManager
 
 
     Characters characters = new();
-    Enemy enemy = new();
+    Enemy enemy = new Enemy();
 
 
 
@@ -37,7 +37,6 @@ public class GameManager
 
         else if (scene == "game")
         {
-            Raylib.ClearBackground(Color.Green);
 
             //UI
 
@@ -59,7 +58,7 @@ public class GameManager
 
 
             //Store
-           /* Store store = new();
+            Store store = new();
             store.Drawstorebutton();
             store.Button();
             if (store.storebuttonispressed == true)
@@ -67,7 +66,7 @@ public class GameManager
 
                 scene = "shop";
 
-            }*/
+            }
 
 
 
@@ -79,8 +78,19 @@ public class GameManager
         }
         else if (scene == "shop")
         {
-            Raylib.ClearBackground(Color.Blue);
 
+            //Store
+            Store store = new();
+            store.Draw();
+            store.Drawbackbutton();
+            store.DrawBuybutton();
+            store.Button();
+            if (store.backbuttonispressed == true)
+            {
+
+                scene = "game";
+
+            }
 
             Characters characters = new();
 
@@ -90,17 +100,6 @@ public class GameManager
             meo.Draw();
             juliusC.Draw();
 
-            //Store
-            /*Store store = new();
-            store.Drawbackbutton();
-            store.DrawBuybutton();
-            store.Button();
-            if (store.backbuttonispressed == true)
-            {
-
-                scene = "game";
-
-            }*/
 
         }
 

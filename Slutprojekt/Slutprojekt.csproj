@@ -13,6 +13,7 @@
   
   <ItemGroup>
     <Content Include="*.png" CopyToOutputDirectory="Always"/>
+    <Content Include="*.webp" CopyToOutputDirectory="Always"/>
     <Content Include="*.ttf" CopyToOutputDirectory="Always"/>
   </ItemGroup>
 

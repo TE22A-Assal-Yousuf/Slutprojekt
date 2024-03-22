@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 GameManager gm = new();
 Damage damage = new();
 
-String scene = "game";
+String scene = "shop";
 
 gm.Update();
 

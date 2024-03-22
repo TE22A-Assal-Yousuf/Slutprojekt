@@ -4,16 +4,17 @@ public class Damage
 {
     Enemy enemy = new Enemy();
     Player player = new Player();
-    public double points = 0;
-    public double gems = 500;
+    public static double points = 0;
+    public static double gems = 500;
 
 
 
     Vector2 mousePos = Raylib.GetMousePosition();
     float autodamagedelay = 0;
-    private static Font MinecraftFont = Raylib.LoadFont("Minecraft.ttf");
-    private static Font MinecrafterFont = Raylib.LoadFont("Minecrafter.Reg.ttf");
-    private static Font font = Raylib.LoadFont("Minecraft.ttf");
+    public static Font MinecraftFont = Raylib.LoadFont("Minecraft.ttf");
+    public static Font MinecrafterFont = Raylib.LoadFont("Minecrafter.Reg.ttf");
+    public static Font NeonGlowFont = Raylib.LoadFont("Neon Glow.ttf");
+
 
     public void Hit()
     {
@@ -48,9 +49,9 @@ public class Damage
     }
     public void Draw()
     {
-        Raylib.DrawTextEx(MinecrafterFont , "Points:", new Vector2 (330,170) , 20 , 5, Color.Black);
-        Raylib.DrawTextEx(MinecraftFont , $"{points}", new Vector2 (280,200) , 50 , 5, Color.Black);
-        Raylib.DrawTextEx(MinecraftFont , $"{gems}", new Vector2 (100,80) , 50 , 5, Color.Black);
+        Raylib.DrawTextEx(MinecrafterFont , "Points:", new Vector2 (330,170) , 20 , 5, Color.White);
+        Raylib.DrawTextEx(MinecraftFont , $"{points}", new Vector2 (280,200) , 50 , 5, Color.White);
+        Raylib.DrawTextEx(MinecraftFont , $"{gems}", new Vector2 (100,80) , 50 , 5, Color.White);
 
     }
 
