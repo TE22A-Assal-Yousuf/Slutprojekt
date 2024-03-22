@@ -6,10 +6,10 @@ class Enemy
     Player player = new();
     //enemy
     public int enmysize = 128;
-    public Rectangle enemyRect = new Rectangle(285, 250, 256, 256);
+    public Rectangle enemyRect = new Rectangle(285, 330, 256, 256);
 
-    Texture2D emntexture = Raylib.LoadTexture(@"Balltexture.png");
     
+    public static Texture2D emntexture = Raylib.LoadTexture(@"Balltexture.png");
     //points
 
     //font 
@@ -22,9 +22,9 @@ class Enemy
     {
 
         //enemy/cllicky
-        Raylib.DrawTexture(emntexture, (int)enemyRect.X, (int)enemyRect.Y, Color.White );
 
-        Raylib.DrawRectangleRec(enemyRect, Color.Gray);
+        Raylib.DrawRectangleRec(enemyRect, Color.Blank);
+        Raylib.DrawTexture(emntexture, (int)enemyRect.X, (int)enemyRect.Y, Color.White );
 
         //points stuff
         

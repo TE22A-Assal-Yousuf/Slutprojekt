@@ -1,9 +1,9 @@
 using System.Numerics;
 
-class Player
+public class Player
 {
-    public double playerDamege = 10;
-    public double autoDamage = 1;
+    public static double playerDamege = 10;
+    public static double autoDamage = 1;
 
     
 

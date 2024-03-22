@@ -25,7 +25,7 @@ public class Damage
             if (Raylib.IsMouseButtonPressed(MouseButton.Left))
             {
 
-                points += player.playerDamege;
+                points += Player.playerDamege;
 
             }
 
@@ -41,7 +41,7 @@ public class Damage
 
             autodamagedelay = 0;
 
-            points += 1;
+            points += Player.autoDamage;
 
         }
 
@@ -49,9 +49,9 @@ public class Damage
     }
     public void Draw()
     {
-        Raylib.DrawTextEx(MinecrafterFont , "Points:", new Vector2 (330,170) , 20 , 5, Color.White);
-        Raylib.DrawTextEx(MinecraftFont , $"{points}", new Vector2 (280,200) , 50 , 5, Color.White);
-        Raylib.DrawTextEx(MinecraftFont , $"{gems}", new Vector2 (100,80) , 50 , 5, Color.White);
+        Raylib.DrawTextEx(MinecrafterFont , "Points:", new Vector2 (330,250) , 20 , 5, Color.White);
+        Raylib.DrawTextEx(MinecraftFont , $"{points}", new Vector2 (280,270) , 50 , 5, Color.White);
+        Raylib.DrawTextEx(MinecraftFont , $"Gems: {gems}", new Vector2 (925,80) , 50 , 5, Color.White);
 
     }
 

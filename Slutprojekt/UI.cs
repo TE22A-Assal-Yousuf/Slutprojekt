@@ -5,7 +5,7 @@ class UI
         public void Draw()
         {
 
-                Texture2D GameBackground = Raylib.LoadTexture(@"Gamebackground2.png");
+                Texture2D GameBackground = Raylib.LoadTexture(@"Gamebackground.png");
                 Raylib.DrawTexture(GameBackground, 0, 0, Color.White );
 
 
@@ -24,7 +24,7 @@ class UI
 public class Store
 {
         //Rectangles
-        public Rectangle Storebutton = new Rectangle(840, 730, 400, 50);
+        public Rectangle Storebutton = new Rectangle(930, 730, 300, 50);
         public Rectangle Backbutton = new Rectangle(30, 720, 150, 50);
         public Rectangle Buybutton = new Rectangle(400, 720, 400, 50);
         public Rectangle ShopWindow = new Rectangle(40, 40, 1200, 720);
@@ -113,7 +113,7 @@ public class Store
                         if (Raylib.IsMouseButtonPressed(MouseButton.Left))
                         {
                                 Damage.points -= 20;
-                                Damage.gems -= 20;
+                                Player.autoDamage += 200;
                         }
 
                 }
