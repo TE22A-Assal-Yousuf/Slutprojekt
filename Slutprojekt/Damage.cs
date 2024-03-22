@@ -19,7 +19,7 @@ public class Damage
     public void Hit()
     {
 
-        if (Raylib.CheckCollisionPointRec(mousePos, enemy.enemyRect))
+        if (Raylib.CheckCollisionPointRec(mousePos, Enemy.enemyRect))
         {
 
             if (Raylib.IsMouseButtonPressed(MouseButton.Left))

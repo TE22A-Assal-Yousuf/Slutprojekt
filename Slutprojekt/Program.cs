@@ -1,24 +1,119 @@
 ﻿global using Raylib_cs;
+using System.Formats.Asn1;
 using System.Numerics;
 using System.Runtime.InteropServices;
 
 GameManager gm = new();
-Damage damage = new();
+UI ui = new();
+Store store = new Store();
+Enemy enemy = new Enemy();
+Player player = new Player();
+Damage damage = new Damage();
+
+
+int windowWidth = 1280;
+int windowHeight = 800;
+int fps = 60;
+
+Raylib.InitWindow(windowWidth, windowHeight, "Clickyballs");
+Raylib.SetTargetFPS(fps);
+
+
+
+Music music = Raylib.LoadMusicStream("Neverseemeagain.mp3");
+
 
 String scene = "game";
 
-gm.Update();
+Raylib.InitAudioDevice();
+
+Raylib.PlayMusicStream(music);
 
 while (!Raylib.WindowShouldClose())
 {
+        damage.update();
+
+    Raylib.UpdateMusicStream(music);
+
+    if (Raylib.IsKeyPressed(KeyboardKey.P))
+    {
+        Raylib.StopMusicStream(music);
+        Raylib.PlayMusicStream(music);
+
+    }
+
+
     Raylib.BeginDrawing();
 
-    damage.update();
 
 
-    scene = gm.Gamemanager(scene); 
 
+    if (scene == "start")
+    {
+
+        Raylib.ClearBackground(Color.Purple);
+
+        if (Raylib.IsKeyPressed(KeyboardKey.Space))
+            {
+                scene = "game";
+            }
+
+    }
+
+    else if (scene == "game")
+    {
+
+        //player stuff
+        // Playerlayer = new();
+
+        //enemy stuff
+        // Enemy enemy = new()
+        ui.Draw();
+        
+        enemy.Draw();
+
+        Damage damage1 = new();
+        damage1.Hit();
+
+        damage.Draw();
+
+        store.Drawstorebutton();
+        //Store
+        Store store1 = new();
+        store1.Button();
+        if (Store.storebuttonispressed == true)
+        {
+
+            scene = "shop";
+
+        }
+
+    }
+    else if (scene == "shop")
+    {
+        
+        Store store1 = new();
+        store.Draw();
+        store.Drawbackbutton();
+        store.DrawBuybutton();
+        store1.Button();
+
+        if (Store.backbuttonispressed == true)
+            {
+
+                scene = "game";
+
+            }
+
+
+    }
 
     Raylib.EndDrawing();
 }
 
+
+Raylib.UnloadMusicStream(music);
+
+Raylib.CloseAudioDevice();
+
+Raylib.CloseWindow();

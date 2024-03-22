@@ -1,22 +1,27 @@
 using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
 
 class UI
 {
+
+        Sound bgmusic = Raylib.LoadSound("Neverseemeagain.mp3");
+        public static Texture2D GameBackground = Raylib.LoadTexture(@"Gamebackground.png");
+
         public void Draw()
         {
 
-                Texture2D GameBackground = Raylib.LoadTexture(@"Gamebackground.png");
-                Raylib.DrawTexture(GameBackground, 0, 0, Color.White );
+                Raylib.DrawTexture(GameBackground, 0, 0, Color.White);
 
 
 
 
-               /* Raylib.DrawRectangle(0, 0, 1280, 32, Color.DarkBrown);//top
-                Raylib.DrawRectangle(0, 768, 1280, 32, Color.DarkBrown);//bottom
-                Raylib.DrawRectangle(0, 0, 32, 800, Color.DarkBrown);//left
-                Raylib.DrawRectangle(800, 0, 800, 800, Color.DarkBrown);//right
 
-                //448 , 736*/
+                /* Raylib.DrawRectangle(0, 0, 1280, 32, Color.DarkBrown);//top
+                 Raylib.DrawRectangle(0, 768, 1280, 32, Color.DarkBrown);//bottom
+                 Raylib.DrawRectangle(0, 0, 32, 800, Color.DarkBrown);//left
+                 Raylib.DrawRectangle(800, 0, 800, 800, Color.DarkBrown);//right
+
+                 //448 , 736*/
 
         }
 
@@ -24,41 +29,32 @@ class UI
 public class Store
 {
         //Rectangles
-        public Rectangle Storebutton = new Rectangle(930, 730, 300, 50);
-        public Rectangle Backbutton = new Rectangle(30, 720, 150, 50);
-        public Rectangle Buybutton = new Rectangle(400, 720, 400, 50);
-        public Rectangle ShopWindow = new Rectangle(40, 40, 1200, 720);
-        public Rectangle Background = new Rectangle(0, 0, 1280, 800);
+        public  static Rectangle Storebutton = new Rectangle(930, 730, 300, 50);
+        public  static Rectangle Backbutton = new Rectangle(30, 720, 150, 50);
+        public static Rectangle Buybutton = new Rectangle(400, 720, 400, 50);
+        public static Rectangle ShopWindow = new Rectangle(40, 40, 1200, 720);
+        public static Rectangle Background = new Rectangle(0, 0, 1280, 800);
 
         //Textures
-        Texture2D storeblur = Raylib.LoadTexture(@"shop bg.webp");
-        Texture2D Backbuttontexture = Raylib.LoadTexture(@"Backbuttontexture.png");
-        Texture2D Buybuttontexture = Raylib.LoadTexture(@"Buybuttontexture.png");
+        public static Texture2D Backbuttontexture = Raylib.LoadTexture(@"Backbuttontexture.png");
+        public static Texture2D Buybuttontexture = Raylib.LoadTexture(@"Buybuttontexture.png");
 
 
-
-        
-        GameManager gm = new();
-        Player player = new();
-        Enemy enemy = new();
-
-
-
-        public bool storebuttonispressed = false;
-        public bool backbuttonispressed = false;
+        public static bool storebuttonispressed = false;
+        public static bool backbuttonispressed = false;
 
 
         Vector2 mousePos = Raylib.GetMousePosition();
 
-         public void Draw()
+        public void Draw()
         {
 
                 Raylib.DrawRectangleRec(Background, Color.DarkBrown);
                 Raylib.DrawRectangleRec(ShopWindow, Color.Brown);
-                Raylib.DrawTextEx(Damage.MinecraftFont , $"{Damage.points}", new Vector2 (280,20) , 50 , 5, Color.Black);
-                Raylib.DrawTextEx(Damage.MinecraftFont , $"{Damage.gems}", new Vector2 (80,20) , 50 , 5, Color.Black);
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.points}", new Vector2(280, 20), 50, 5, Color.Black);
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.gems}", new Vector2(80, 20), 50, 5, Color.Black);
 
-                
+
         }
         public void Drawstorebutton()
         {
@@ -70,7 +66,7 @@ public class Store
         public void Drawbackbutton()
         {
                 Raylib.DrawRectangleRec(Backbutton, Color.Green);
-                Raylib.DrawTexture(Backbuttontexture, (int)Backbutton.X, (int)Backbutton.Y, Color.White );
+                Raylib.DrawTexture(Backbuttontexture, (int)Backbutton.X, (int)Backbutton.Y, Color.White);
                 //Raylib.DrawText("BACK", (int)Backbutton.X, (int)Backbutton.Y + 5, 40, Color.Black);
 
 
@@ -78,7 +74,7 @@ public class Store
         public void DrawBuybutton()
         {
                 Raylib.DrawRectangleRec(Buybutton, Color.Brown);
-                Raylib.DrawTexture(Buybuttontexture, (int)Buybutton.X, (int)Buybutton.Y, Color.White );
+                Raylib.DrawTexture(Buybuttontexture, (int)Buybutton.X, (int)Buybutton.Y, Color.White);
                 //Raylib.DrawText("BUY", (int)Buybutton.X, (int)Buybutton.Y + 5, 40, Color.Black);
 
         }
@@ -92,6 +88,7 @@ public class Store
                         {
 
                                 storebuttonispressed = true;
+                                backbuttonispressed = false;
 
                         }
 
@@ -105,6 +102,7 @@ public class Store
                         {
 
                                 backbuttonispressed = true;
+                                storebuttonispressed = false;
 
                         }
                 }
@@ -120,5 +118,5 @@ public class Store
 
 
         }
-       
+
 }
