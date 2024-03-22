@@ -5,7 +5,6 @@ using System.ComponentModel;
 
 class Rewards
 {
-    Characters characters = new();
 
 
     public string name { get; }
@@ -42,10 +41,7 @@ public class Characters
 
     public void Draw()
     {
-        JuliusC juliusC = new();
-
-        juliusC.Draw();
-       
+        
 
     }
 
@@ -53,42 +49,7 @@ public class Characters
 
 
 }
-public class JuliusC
-{
-    string Name = "Julius";
-    int Damage = 10;
-    short Stars = 4;
-     Texture2D JuliusTexture = Raylib.LoadTexture(@"Hyper.png");
 
-    public void Draw()
-    {
-
-
-        Raylib.DrawTexture(JuliusTexture, 40, 60, Color.White);
-
-
-
-    }
-
-}
-public class Meo
-{
-    string Name = "Meo";
-    int Damage = 10;
-    short Stars = 4;
-    Texture2D MeoTexture = Raylib.LoadTexture(@"Meo.png");
-
-    public void Draw()
-    {
-
-
-        Raylib.DrawTexture(MeoTexture, 480, 63, Color.White);
-
-
-
-    }
-
-}
 
 
 

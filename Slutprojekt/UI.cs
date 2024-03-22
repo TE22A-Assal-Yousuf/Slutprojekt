@@ -51,8 +51,8 @@ public class Store
 
                 Raylib.DrawRectangleRec(Background, Color.DarkBrown);
                 Raylib.DrawRectangleRec(ShopWindow, Color.Brown);
-                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.points}", new Vector2(280, 20), 50, 5, Color.Black);
-                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.gems}", new Vector2(80, 20), 50, 5, Color.Black);
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.points}", new Vector2(880, 42), 50, 5, Color.Black);
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.gems}", new Vector2(720, 42), 50, 5, Color.Black);
 
 
         }

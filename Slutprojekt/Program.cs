@@ -3,8 +3,7 @@ using System.Formats.Asn1;
 using System.Numerics;
 using System.Runtime.InteropServices;
 
-GameManager gm = new();
-UI ui = new();
+UI ui = new UI();
 Store store = new Store();
 Enemy enemy = new Enemy();
 Player player = new Player();
