@@ -9,8 +9,13 @@ class UI
 
         public void Draw()
         {
-
                 Raylib.DrawTexture(GameBackground, 0, 0, Color.White);
+
+                Raylib.DrawTextEx(Damage.MinecrafterFont, "Points:", new Vector2(330, 230), 40, 5, Color.White);
+                Raylib.DrawTextEx(Damage.MinecrafterFont, $"DPS {Player.autoDamage}", new Vector2(940, 50), 20, 5, Color.White);
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.points}", new Vector2(280, 270), 50, 5, Color.White);
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"Gems: {Damage.gems}", new Vector2(925, 85), 50, 5, Color.White);
+
 
 
 
@@ -29,8 +34,8 @@ class UI
 public class Store
 {
         //Rectangles
-        public  static Rectangle Storebutton = new Rectangle(930, 730, 300, 50);
-        public  static Rectangle Backbutton = new Rectangle(30, 720, 150, 50);
+        public static Rectangle Storebutton = new Rectangle(930, 730, 300, 50);
+        public static Rectangle Backbutton = new Rectangle(30, 720, 150, 50);
         public static Rectangle Buybutton = new Rectangle(400, 720, 400, 50);
         public static Rectangle ShopWindow = new Rectangle(40, 40, 1200, 720);
         public static Rectangle Background = new Rectangle(0, 0, 1280, 800);
@@ -38,6 +43,12 @@ public class Store
         //Textures
         public static Texture2D Backbuttontexture = Raylib.LoadTexture(@"Backbuttontexture.png");
         public static Texture2D Buybuttontexture = Raylib.LoadTexture(@"Buybuttontexture.png");
+
+
+        public static Texture2D Shopbg = Raylib.LoadTexture(@"Shopbg.png");
+        public static Texture2D Shopbg2 = Raylib.LoadTexture(@"Shopbg2.png");
+        public static Texture2D Shopbg3 = Raylib.LoadTexture(@"Shopbg3.png");
+        public static Texture2D Shopovrly = Raylib.LoadTexture(@"shopovrly.png");
 
 
         public static bool storebuttonispressed = false;
@@ -49,10 +60,16 @@ public class Store
         public void Draw()
         {
 
-                Raylib.DrawRectangleRec(Background, Color.DarkBrown);
-                Raylib.DrawRectangleRec(ShopWindow, Color.Brown);
-                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.points}", new Vector2(880, 42), 50, 5, Color.Black);
-                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.gems}", new Vector2(720, 42), 50, 5, Color.Black);
+                Raylib.DrawTexture(Shopbg3, 0, 0, Color.White);
+                Raylib.DrawTexture(Shopovrly, 32, 32, Color.White);
+
+                //Raylib.DrawRectangleRec(Background, Color.DarkBrown);
+                //Raylib.DrawRectangleRec(ShopWindow, Color.Brown);
+
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.points}", new Vector2(880, 42), 50, 5, Color.White);
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.gems}", new Vector2(720, 42), 50, 5, Color.White);
+
+
 
 
         }
@@ -74,8 +91,8 @@ public class Store
         public void DrawBuybutton()
         {
                 Raylib.DrawRectangleRec(Buybutton, Color.Brown);
-                Raylib.DrawTexture(Buybuttontexture, (int)Buybutton.X, (int)Buybutton.Y, Color.White);
-                //Raylib.DrawText("BUY", (int)Buybutton.X, (int)Buybutton.Y + 5, 40, Color.Black);
+                Raylib.DrawTexture(Buybuttontexture, (int)Buybutton.X, (int)Buybutton.Y, Color.Blank);
+                Raylib.DrawText("BUY", (int)Buybutton.X, (int)Buybutton.Y + 5, 40, Color.Black);
 
         }
         public void Button()

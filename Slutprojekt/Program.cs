@@ -8,6 +8,7 @@ Store store = new Store();
 Enemy enemy = new Enemy();
 Player player = new Player();
 Damage damage = new Damage();
+Rewards rewards = new Rewards();
 
 
 int windowWidth = 1280;
@@ -61,25 +62,30 @@ while (!Raylib.WindowShouldClose())
 
     else if (scene == "game")
     {
+        Store store1 = new();
+        Damage damage1 = new();
+        Rewards rewards1 = new();
 
-        //player stuff
-        // Playerlayer = new();
 
-        //enemy stuff
-        // Enemy enemy = new()
+        //system
         ui.Draw();
         
         enemy.Draw();
 
-        Damage damage1 = new();
+        store1.Button();
         damage1.Hit();
 
-        damage.Draw();
+        rewards1.Upgradebuttons();
+        
+        //graphics
 
+
+        damage.Draw();
+        rewards.start();
         store.Drawstorebutton();
+
+
         //Store
-        Store store1 = new();
-        store1.Button();
         if (Store.storebuttonispressed == true)
         {
 
