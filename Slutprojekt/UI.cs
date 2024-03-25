@@ -7,15 +7,33 @@ class UI
         Sound bgmusic = Raylib.LoadSound("Neverseemeagain.mp3");
         public static Texture2D GameBackground = Raylib.LoadTexture(@"Gamebackground.png");
 
+        public void DrawLines()
+        {
+                Raylib.DrawLine(10, 0, 10, 800, Color.Red);
+                Raylib.DrawLine(460, 0, 460, 800, Color.Red);
+                Raylib.DrawLine(1270, 0, 1270, 800, Color.Red);
+                Raylib.DrawLine(870, 0, 870, 800, Color.Red);
+        }
         public void Draw()
         {
                 Raylib.DrawTexture(GameBackground, 0, 0, Color.White);
 
-                Raylib.DrawTextEx(Damage.MinecrafterFont, "Points:", new Vector2(330, 230), 40, 5, Color.White);
-                Raylib.DrawTextEx(Damage.MinecrafterFont, $"DPS {Player.autoDamage}", new Vector2(940, 50), 20, 5, Color.White);
-                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.points}", new Vector2(280, 270), 50, 5, Color.White);
-                Raylib.DrawTextEx(Damage.MinecraftFont, $"Gems: {Damage.gems}", new Vector2(925, 85), 50, 5, Color.White);
 
+                Raylib.DrawTextEx(Damage.MinecrafterFont, "Points:", new Vector2(575, 230), 40, 5, Color.White);
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"{Damage.points}", new Vector2(520, 270), 50, 5, Color.White);
+
+                Raylib.DrawTextEx(Damage.MinecrafterFont, $"DPS {Player.autoDamage}", new Vector2(930, 50), 20, 5, Color.White);
+
+                Raylib.DrawTextEx(Damage.MinecraftFont, $"Gems: {Damage.gems}", new Vector2(925, 105), 50, 5, Color.White);
+
+                //hit cooldown bar
+                if (Player.autoDamage >= 1)
+                {
+
+                        Raylib.DrawRectangle(930, 75, 70, 10, Color.Gray);
+                        Raylib.DrawRectangle(930, 75, (int)(Damage.autodamagedelay * 70), 10, Color.White);
+
+                }
 
 
 
@@ -33,6 +51,29 @@ class UI
 }
 public class Store
 {
+
+        //postition 
+
+        public static List<Rectangle> ShopListPositions = new List<Rectangle>();
+
+        Rectangle Position1 = new Rectangle(new Vector2(78, 128), new Vector2(250,250));
+        Rectangle Position2 = new Rectangle(new Vector2(360, 128), new Vector2(250,250));
+        Rectangle Position3 = new Rectangle(new Vector2(642, 128), new Vector2(250,250));
+        Rectangle Position4 = new Rectangle(new Vector2(78, 420), new Vector2(250,250));
+        Rectangle Position5 = new Rectangle(new Vector2(360, 420), new Vector2(250,250));
+        Rectangle Position6 = new Rectangle(new Vector2(642, 420), new Vector2(250,250));
+        Rectangle SpecialPosition = new Rectangle(new Vector2(924, 128), new Vector2(250,550));
+
+        public void postitionDraw()
+        {
+                ShopListPositions.Add(Position1);
+                ShopListPositions.Add(Position2);
+                ShopListPositions.Add(Position3);
+
+        }
+
+
+
         //Rectangles
         public static Rectangle Storebutton = new Rectangle(930, 730, 300, 50);
         public static Rectangle Backbutton = new Rectangle(30, 720, 150, 50);
@@ -54,14 +95,19 @@ public class Store
         public static bool storebuttonispressed = false;
         public static bool backbuttonispressed = false;
 
+        public static int wishPrice = 200;
 
         Vector2 mousePos = Raylib.GetMousePosition();
+
+        
 
         public void Draw()
         {
 
                 Raylib.DrawTexture(Shopbg3, 0, 0, Color.White);
                 Raylib.DrawTexture(Shopovrly, 32, 32, Color.White);
+
+                
 
                 //Raylib.DrawRectangleRec(Background, Color.DarkBrown);
                 //Raylib.DrawRectangleRec(ShopWindow, Color.Brown);
@@ -127,13 +173,21 @@ public class Store
                 {
                         if (Raylib.IsMouseButtonPressed(MouseButton.Left))
                         {
-                                Damage.points -= 20;
-                                Player.autoDamage += 200;
+                                if (Damage.points >= wishPrice)
+                                {
+
+                                        Damage.points -= 200;
+                                        Player.autoDamage += 200;
+
+                                }
                         }
 
                 }
 
 
         }
+
+
+        
 
 }

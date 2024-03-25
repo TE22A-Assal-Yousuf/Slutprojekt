@@ -10,7 +10,7 @@ public class Damage
 
 
     Vector2 mousePos = Raylib.GetMousePosition();
-    float autodamagedelay = 0;
+    public static float autodamagedelay = 1;
     public static Font MinecraftFont = Raylib.LoadFont("Minecraft.ttf");
     public static Font MinecrafterFont = Raylib.LoadFont("Minecrafter.Reg.ttf");
     public static Font NeonGlowFont = Raylib.LoadFont("Neon Glow.ttf");
@@ -34,12 +34,12 @@ public class Damage
     public void update()
     {
 
-        autodamagedelay += Raylib.GetFrameTime();
+        autodamagedelay -= Raylib.GetFrameTime();
 
-        if (autodamagedelay > 1)
+        if (autodamagedelay <= 0)
         {
 
-            autodamagedelay = 0;
+            autodamagedelay = 1;
 
             points += Player.autoDamage;
 

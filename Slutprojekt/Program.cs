@@ -69,13 +69,13 @@ while (!Raylib.WindowShouldClose())
 
         //system
         ui.Draw();
-        
         enemy.Draw();
 
         store1.Button();
         damage1.Hit();
 
         rewards1.Upgradebuttons();
+        rewards.BuffsAdd();
         
         //graphics
 
@@ -83,6 +83,7 @@ while (!Raylib.WindowShouldClose())
         damage.Draw();
         rewards.start();
         store.Drawstorebutton();
+        ui.DrawLines();
 
 
         //Store
@@ -99,8 +100,15 @@ while (!Raylib.WindowShouldClose())
         
         Store store1 = new();
         store.Draw();
+
         store.Drawbackbutton();
         store.DrawBuybutton();
+        store.postitionDraw();
+
+        
+
+        rewards.DrawCharacters();
+
         store1.Button();
 
         if (Store.backbuttonispressed == true)
